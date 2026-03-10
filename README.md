@@ -1,10 +1,10 @@
-# 🗑️ Smart Waste Management System
+#  Smart Waste Management System
 
 A relational database system designed to help municipal bodies efficiently manage waste collection, recycling, and disposal operations across urban areas.
 
 ---
 
-## 📌 What This Project Does
+## What This Project Does
 
 This system stores and manages data about:
 - City locations and their populations
@@ -20,7 +20,7 @@ It helps authorities:
 
 ---
 
-## 🗂️ Database Tables
+## Database Tables
 
 | Table | What it stores |
 |-------|---------------|
@@ -29,9 +29,8 @@ It helps authorities:
 | `Collection` | Records of each waste collection event |
 | `RecyclingCenters` | Recycling facilities and their capacities |
 
----
 
-## 📁 File Structure
+## File Structure
 
 ```
 smart-waste-management/
@@ -47,7 +46,7 @@ smart-waste-management/
 
 ---
 
-## 🔍 Queries Included
+## Queries Included
 
 - Count bins per area
 - Find bins above 80% fill level
@@ -62,16 +61,14 @@ smart-waste-management/
 
 ---
 
-## ⚙️ PL/SQL Features
+## PL/SQL Features
 
 - **Function** — calculates fill percentage for any bin
 - **Trigger** — prevents bin fill from exceeding capacity
 - **Procedure** — adds a new collection record
 - **Cursor** — loops through and displays all locations
 
----
-
-## 🚀 How to Run
+## How to Run
 
 1. Open **Oracle SQL Developer**
 2. Run the files in this order:
@@ -82,7 +79,7 @@ schema.sql → inserts.sql → queries.sql → plsql.sql
 
 ---
 
-## 🛠️ Technologies Used
+##Technologies Used
 
 - Oracle SQL
 - PL/SQL

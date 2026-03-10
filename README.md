@@ -1,42 +1,33 @@
 # 🗑️ Smart Waste Management System
 
-A Course-Based Project for **Database Management System Laboratory (22PC2AM201)**
-
-**Department of Information Technology**
-Vallurupalli Nageswara Rao Vignana Jyothi Institute of Engineering & Technology (VNRVJIET)
+A relational database system designed to help municipal bodies efficiently manage waste collection, recycling, and disposal operations across urban areas.
 
 ---
 
-## 👥 Team Members
+## 📌 What This Project Does
 
-| Name         | Roll Number |
-|--------------|-------------|
-| M. Sathwik   | 24071A1238  |
-| M. Praneeth  | 24071A1239  |
-| M. Samhitha  | 24071A1240  |
-| M. Varshitha | 24071A1241  |
+This system stores and manages data about:
+- City locations and their populations
+- Waste bins placed in each area (type, capacity, fill level)
+- Waste collection events (who collected, how much, when)
+- Recycling centers and their capacities
 
-**Guide:** DR. B. Raswitha, Assistant Professor, Dept. of IT
-
----
-
-## 📌 About the Project
-
-The **Smart Waste Management Database System** is a relational database designed to help municipal bodies and environmental organizations efficiently manage:
-- Waste collection and recycling operations
-- Bin fill levels and collection scheduling
-- Recycling center capacity tracking
+It helps authorities:
+- Track which bins are nearly full and need collection
+- Monitor collector performance
+- Analyze waste generation by area or type
+- Optimize recycling center usage
 
 ---
 
-## 🗂️ Database Schema
+## 🗂️ Database Tables
 
-| Table            | Description                                  |
-|------------------|----------------------------------------------|
-| `Locations`      | City areas/zones with population info        |
-| `WasteBins`      | Bins with type, capacity, and fill status    |
-| `Collection`     | Waste collection events and collector info   |
-| `RecyclingCenters` | Recycling facilities with capacity info   |
+| Table | What it stores |
+|-------|---------------|
+| `Locations` | City areas with population data |
+| `WasteBins` | Bins with waste type, capacity, and current fill level |
+| `Collection` | Records of each waste collection event |
+| `RecyclingCenters` | Recycling facilities and their capacities |
 
 ---
 
@@ -46,33 +37,53 @@ The **Smart Waste Management Database System** is a relational database designed
 smart-waste-management/
 │
 ├── sql/
-│   ├── schema.sql      # DDL - Table creation
-│   ├── inserts.sql     # Sample data insertions
-│   ├── queries.sql     # SQL queries (13 queries)
-│   └── plsql.sql       # PL/SQL blocks, functions, triggers, cursors
+│   ├── schema.sql       # Creates all 4 tables
+│   ├── inserts.sql      # Sample data for testing
+│   ├── queries.sql      # 13 SQL queries for analysis
+│   └── plsql.sql        # Procedures, functions, triggers, cursors
 │
 └── README.md
 ```
 
 ---
 
+## 🔍 Queries Included
+
+- Count bins per area
+- Find bins above 80% fill level
+- Top 3 locations by total waste collected
+- Collector who collected the most waste
+- Average fill percentage per area
+- Waste type with highest fill percentage
+- Bins that have never been collected
+- Month with highest total waste collection
+- Locations with high population but fewer bins
+- Total and above-average recycling capacity
+
+---
+
+## ⚙️ PL/SQL Features
+
+- **Function** — calculates fill percentage for any bin
+- **Trigger** — prevents bin fill from exceeding capacity
+- **Procedure** — adds a new collection record
+- **Cursor** — loops through and displays all locations
+
+---
+
 ## 🚀 How to Run
 
-1. Open Oracle SQL Developer or any Oracle-compatible SQL tool.
-2. Run files in this order:
-   ```
-   schema.sql  →  inserts.sql  →  queries.sql  →  plsql.sql
-   ```
+1. Open **Oracle SQL Developer**
+2. Run the files in this order:
+
+```
+schema.sql → inserts.sql → queries.sql → plsql.sql
+```
 
 ---
 
-## 🔧 Technologies Used
+## 🛠️ Technologies Used
 
-- **Database:** Oracle SQL / PL/SQL
-- **Concepts:** ER Modeling, Normalization (1NF, 2NF, 3NF), DDL, DML, Stored Procedures, Triggers, Cursors
-
----
-
-## 📄 License
-
-This project is submitted for academic purposes at VNRVJIET, Hyderabad (2025–2026).
+- Oracle SQL
+- PL/SQL
+- Concepts: ER Modeling, Normalization (1NF, 2NF, 3NF), DDL, DML, Triggers, Cursors, Stored Procedures
